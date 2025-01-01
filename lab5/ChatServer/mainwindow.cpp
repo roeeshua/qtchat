@@ -30,15 +30,6 @@ void MainWindow::on_startStopButton_clicked()
         logMessage("服务器已经启动");
         ui->startStopButton->setText("停止服务器");
     }
-    // static bool started=false;
-    // started = !started;
-    // if(started){
-    //     ui->startStopButton->setText("停止服务器");
-    //     logMessage("服务器已经启动");
-    // }else{
-    //     ui->startStopButton->setText("启动服务器");
-    //     logMessage("服务器已经停止");
-    // }
 }
 
 void MainWindow::logMessage(const QString &msg)

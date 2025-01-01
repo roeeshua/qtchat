@@ -281,6 +281,7 @@ Makefile: F:/Qt/lab5/ChatClient/ChatClient.pro ../../../../6.7.2/mingw_64/mkspec
 		F:/Qt/lab5/ChatClient/ChatClient.pro \
 		../../../../6.7.2/mingw_64/lib/Qt6Widgets.prl \
 		../../../../6.7.2/mingw_64/lib/Qt6Gui.prl \
+		../../../../6.7.2/mingw_64/lib/Qt6Network.prl \
 		../../../../6.7.2/mingw_64/lib/Qt6Core.prl \
 		../../../../6.7.2/mingw_64/lib/Qt6EntryPoint.prl \
 		../../../../6.7.2/mingw_64/mkspecs/features/build_pass.prf
@@ -496,6 +497,7 @@ Makefile: F:/Qt/lab5/ChatClient/ChatClient.pro ../../../../6.7.2/mingw_64/mkspec
 F:/Qt/lab5/ChatClient/ChatClient.pro:
 ../../../../6.7.2/mingw_64/lib/Qt6Widgets.prl:
 ../../../../6.7.2/mingw_64/lib/Qt6Gui.prl:
+../../../../6.7.2/mingw_64/lib/Qt6Network.prl:
 ../../../../6.7.2/mingw_64/lib/Qt6Core.prl:
 ../../../../6.7.2/mingw_64/lib/Qt6EntryPoint.prl:
 ../../../../6.7.2/mingw_64/mkspecs/features/build_pass.prf:

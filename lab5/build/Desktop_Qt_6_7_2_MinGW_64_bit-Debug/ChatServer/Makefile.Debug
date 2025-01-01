@@ -437,6 +437,17 @@ debug/moc_mainwindow.cpp: F:/Qt/lab5/ChatServer/mainwindow.h \
 		../../../../6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		F:/Qt/lab5/ChatServer/chatserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpServer \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qabstractsocket.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Qt/lab5/ChatServer/serverworker.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpSocket \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpsocket.h \
 		debug/moc_predefs.h \
 		../../../../6.7.2/mingw_64/bin/moc.exe
 	F:\QT\6.7.2\mingw_64\bin\moc.exe $(DEFINES) --include F:/QT/lab5/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/ChatServer/debug/moc_predefs.h -IF:/QT/6.7.2/mingw_64/mkspecs/win32-g++ -IF:/Qt/lab5/ChatServer -IF:/QT/6.7.2/mingw_64/include -IF:/QT/6.7.2/mingw_64/include/QtWidgets -IF:/QT/6.7.2/mingw_64/include/QtGui -IF:/QT/6.7.2/mingw_64/include/QtNetwork -IF:/QT/6.7.2/mingw_64/include/QtCore -I. -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IF:/QT/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IF:/QT/Tools/mingw1120_64/x86_64-w64-mingw32/include F:\Qt\lab5\ChatServer\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -906,6 +917,17 @@ debug/main.o: F:/Qt/lab5/ChatServer/main.cpp F:/Qt/lab5/ChatServer/mainwindow.h 
 		../../../../6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		F:/Qt/lab5/ChatServer/chatserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpServer \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qabstractsocket.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Qt/lab5/ChatServer/serverworker.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpSocket \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpsocket.h \
 		../../../../6.7.2/mingw_64/include/QtWidgets/QApplication \
 		../../../../6.7.2/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o F:\Qt\lab5\ChatServer\main.cpp
@@ -1099,6 +1121,17 @@ debug/mainwindow.o: F:/Qt/lab5/ChatServer/mainwindow.cpp F:/Qt/lab5/ChatServer/m
 		../../../../6.7.2/mingw_64/include/QtCore/qlocale.h \
 		../../../../6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 		../../../../6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
+		F:/Qt/lab5/ChatServer/chatserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpServer \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpserver.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qabstractsocket.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qhostaddress.h \
+		F:/Qt/lab5/ChatServer/serverworker.h \
+		../../../../6.7.2/mingw_64/include/QtNetwork/QTcpSocket \
+		../../../../6.7.2/mingw_64/include/QtNetwork/qtcpsocket.h \
 		ui_mainwindow.h \
 		../../../../6.7.2/mingw_64/include/QtCore/QVariant \
 		../../../../6.7.2/mingw_64/include/QtWidgets/QApplication \
@@ -1130,7 +1163,11 @@ debug/mainwindow.o: F:/Qt/lab5/ChatServer/mainwindow.cpp F:/Qt/lab5/ChatServer/m
 		../../../../6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../../6.7.2/mingw_64/include/QtWidgets/QSpacerItem \
 		../../../../6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
-		../../../../6.7.2/mingw_64/include/QtWidgets/QWidget
+		../../../../6.7.2/mingw_64/include/QtWidgets/QWidget \
+		../../../../6.7.2/mingw_64/include/QtWidgets/QMessageBox \
+		../../../../6.7.2/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../../6.7.2/mingw_64/include/QtWidgets/qdialog.h \
+		../../../../6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o F:\Qt\lab5\ChatServer\mainwindow.cpp
 
 debug/serverworker.o: F:/Qt/lab5/ChatServer/serverworker.cpp F:/Qt/lab5/ChatServer/serverworker.h \
@@ -1254,7 +1291,22 @@ debug/serverworker.o: F:/Qt/lab5/ChatServer/serverworker.cpp F:/Qt/lab5/ChatServ
 		../../../../6.7.2/mingw_64/include/QtCore/qhash.h \
 		../../../../6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
 		../../../../6.7.2/mingw_64/include/QtCore/qvariant.h \
-		../../../../6.7.2/mingw_64/include/QtCore/q23utility.h
+		../../../../6.7.2/mingw_64/include/QtCore/q23utility.h \
+		../../../../6.7.2/mingw_64/include/QtCore/QDataStream \
+		../../../../6.7.2/mingw_64/include/QtCore/QJsonObject \
+		../../../../6.7.2/mingw_64/include/QtCore/qjsonobject.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qjsonvalue.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qcborvalue.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qdatetime.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qcalendar.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qlocale.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qcborcommon.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qregularexpression.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qurl.h \
+		../../../../6.7.2/mingw_64/include/QtCore/quuid.h \
+		../../../../6.7.2/mingw_64/include/QtCore/qendian.h \
+		../../../../6.7.2/mingw_64/include/QtCore/QJsonDocument \
+		../../../../6.7.2/mingw_64/include/QtCore/qjsondocument.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\serverworker.o F:\Qt\lab5\ChatServer\serverworker.cpp
 
 debug/moc_chatserver.o: debug/moc_chatserver.cpp 
