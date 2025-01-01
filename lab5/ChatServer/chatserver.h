@@ -23,6 +23,7 @@ signals:
 public slots:
     void stopServer();
     void jsonReceived(Serverworker *sender,const QJsonObject &docObj);
+    void userDisconnected(Serverworker *sender);
 };
 
 #endif // CHATSERVER_H

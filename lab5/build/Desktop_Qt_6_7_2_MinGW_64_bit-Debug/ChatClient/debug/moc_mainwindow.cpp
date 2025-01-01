@@ -47,7 +47,10 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "jsonReceived",
     "docObj",
     "userJoined",
-    "user"
+    "user",
+    "userleft",
+    "userListReceived",
+    "list"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -60,7 +63,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -68,13 +71,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x08,    1 /* Private */,
-       3,    0,   57,    2, 0x08,    2 /* Private */,
-       4,    0,   58,    2, 0x08,    3 /* Private */,
-       5,    0,   59,    2, 0x08,    4 /* Private */,
-       6,    2,   60,    2, 0x08,    5 /* Private */,
-       9,    1,   65,    2, 0x08,    8 /* Private */,
-      11,    1,   68,    2, 0x08,   10 /* Private */,
+       1,    0,   68,    2, 0x08,    1 /* Private */,
+       3,    0,   69,    2, 0x08,    2 /* Private */,
+       4,    0,   70,    2, 0x08,    3 /* Private */,
+       5,    0,   71,    2, 0x08,    4 /* Private */,
+       6,    2,   72,    2, 0x08,    5 /* Private */,
+       9,    1,   77,    2, 0x08,    8 /* Private */,
+      11,    1,   80,    2, 0x08,   10 /* Private */,
+      13,    1,   83,    2, 0x08,   12 /* Private */,
+      14,    1,   86,    2, 0x08,   14 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -84,6 +89,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    7,    8,
     QMetaType::Void, QMetaType::QJsonObject,   10,
     QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QStringList,   15,
 
        0        // eod
 };
@@ -114,7 +121,13 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QJsonObject &, std::false_type>,
         // method 'userJoined'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'userleft'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'userListReceived'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QStringList &, std::false_type>
     >,
     nullptr
 } };
@@ -132,6 +145,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->messageReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 5: _t->jsonReceived((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
         case 6: _t->userJoined((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->userleft((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: _t->userListReceived((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         default: ;
         }
     }
@@ -156,13 +171,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 9;
     }
     return _id;
 }

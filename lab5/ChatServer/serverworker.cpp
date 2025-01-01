@@ -7,6 +7,7 @@ Serverworker::Serverworker(QObject *parent)
 {
     m_serverSocket = new QTcpSocket(this);
     connect(m_serverSocket,&QTcpSocket::readyRead,this,&Serverworker::onReadyRead);
+    connect(m_serverSocket,&QTcpSocket::disconnected,this,&Serverworker::disconnectedFromClient);
 }
 
 bool Serverworker::setSocketDescriptor(qintptr socketDescriptor)
