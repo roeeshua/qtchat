@@ -40,13 +40,16 @@ constexpr auto qt_meta_stringdata_CLASSChatClientENDCLASS = QtMocHelpers::string
     "",
     "messageReceived",
     "text",
+    "jsonReceived",
+    "docObj",
     "onReadyRead",
     "sendMessage",
     "type",
     "connectToserver",
     "QHostAddress",
     "address",
-    "port"
+    "port",
+    "disconnectFromHost"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -59,32 +62,36 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSChatClientENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x06,    1 /* Public */,
-       3,    1,   51,    2, 0x06,    2 /* Public */,
+       1,    0,   62,    2, 0x06,    1 /* Public */,
+       3,    1,   63,    2, 0x06,    2 /* Public */,
+       5,    1,   66,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    0,   54,    2, 0x0a,    4 /* Public */,
-       6,    2,   55,    2, 0x0a,    5 /* Public */,
-       6,    1,   60,    2, 0x2a,    8 /* Public | MethodCloned */,
-       8,    2,   63,    2, 0x0a,   10 /* Public */,
+       7,    0,   69,    2, 0x0a,    6 /* Public */,
+       8,    2,   70,    2, 0x0a,    7 /* Public */,
+       8,    1,   75,    2, 0x2a,   10 /* Public | MethodCloned */,
+      10,    2,   78,    2, 0x0a,   12 /* Public */,
+      14,    0,   83,    2, 0x0a,   15 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, QMetaType::QJsonObject,    6,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    4,    7,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    4,    9,
     QMetaType::Void, QMetaType::QString,    4,
-    QMetaType::Void, 0x80000000 | 9, QMetaType::UShort,   10,   11,
+    QMetaType::Void, 0x80000000 | 11, QMetaType::UShort,   12,   13,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -103,6 +110,9 @@ Q_CONSTINIT const QMetaObject ChatClient::staticMetaObject = { {
         // method 'messageReceived'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'jsonReceived'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QJsonObject &, std::false_type>,
         // method 'onReadyRead'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'sendMessage'
@@ -115,7 +125,9 @@ Q_CONSTINIT const QMetaObject ChatClient::staticMetaObject = { {
         // method 'connectToserver'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QHostAddress &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<quint16, std::false_type>
+        QtPrivate::TypeAndForceComplete<quint16, std::false_type>,
+        // method 'disconnectFromHost'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -128,10 +140,12 @@ void ChatClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->connected(); break;
         case 1: _t->messageReceived((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: _t->onReadyRead(); break;
-        case 3: _t->sendMessage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 4: _t->sendMessage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 5: _t->connectToserver((*reinterpret_cast< std::add_pointer_t<QHostAddress>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<quint16>>(_a[2]))); break;
+        case 2: _t->jsonReceived((*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[1]))); break;
+        case 3: _t->onReadyRead(); break;
+        case 4: _t->sendMessage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 5: _t->sendMessage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: _t->connectToserver((*reinterpret_cast< std::add_pointer_t<QHostAddress>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<quint16>>(_a[2]))); break;
+        case 7: _t->disconnectFromHost(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -147,6 +161,13 @@ void ChatClient::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             using _t = void (ChatClient::*)(const QString & );
             if (_t _q_method = &ChatClient::messageReceived; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (ChatClient::*)(const QJsonObject & );
+            if (_t _q_method = &ChatClient::jsonReceived; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 2;
                 return;
             }
         }
@@ -172,13 +193,13 @@ int ChatClient::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }
@@ -194,5 +215,12 @@ void ChatClient::messageReceived(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void ChatClient::jsonReceived(const QJsonObject & _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_WARNING_POP
